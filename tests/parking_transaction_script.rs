@@ -1,7 +1,7 @@
 #[cfg(test)]
-mod parking {
+mod parking_transaction_script {
     use std::time::{Duration, UNIX_EPOCH};
-    use value_object::application::parking_service::ParkingService;
+    use value_object::application::transaction_script::parking_service::ParkingService;
 
     #[tokio::test]
     async fn test_valid_checkin_and_checkout() {
@@ -25,7 +25,7 @@ mod parking {
         assert_eq!(price, 20.0);
     }
 
-    /* [Não lançar uma erro carro não encontrado tente sair] */
+    // INFO: Não lançar uma erro carro não encontrado tente sair
     #[tokio::test]
     async fn test_is_plate_not_found_error() {
         let plate = "AAA9999".to_string();
@@ -37,7 +37,7 @@ mod parking {
         assert_eq!(result.unwrap_err(), "Car not found".to_string());
     }
 
-    /* [Não deve deve entrar carro com plana inválida] */
+    // INFO: Não deve deve entrar carro com plana inválida
     #[tokio::test]
     async fn test_invalid_plate_error() {
         let invalid_plate = "AA99".to_string();
