@@ -1,7 +1,7 @@
 #[cfg(test)]
 mod parking_transaction_script {
     use std::time::{Duration, UNIX_EPOCH};
-    use value_object::application::transaction_script::parking_service::ParkingService;
+    use value_object::transaction_script::parking_service::ParkingService;
 
     #[tokio::test]
     async fn test_valid_checkin_and_checkout() {

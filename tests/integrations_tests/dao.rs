@@ -1,7 +1,7 @@
 #[cfg(test)]
 mod parking_dao {
     use chrono::NaiveDateTime;
-    use value_object::application::dao::{
+    use value_object::dao::{
         in_memory_parked_car_dao::ParkedCarDAOInMemory, parked_car_service::ParkingServiceDAO,
     };
 

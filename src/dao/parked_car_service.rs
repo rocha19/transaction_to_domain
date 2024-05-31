@@ -1,4 +1,4 @@
-use crate::application::dao::parked_car_dao::ParkedCar;
+use crate::dao::parked_car_dao::ParkedCar;
 use chrono::{NaiveDateTime, Timelike};
 use regex::Regex;
 

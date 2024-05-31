@@ -1,4 +1,6 @@
-mod application;
+mod dao;
+mod domain_model;
+mod transaction_script;
 
 #[tokio::main]
 async fn main() {
